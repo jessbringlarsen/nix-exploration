@@ -4,6 +4,7 @@
 		buildInputs = with pkgs; [
 			figlet
 			cowsay
+			htop
 		];
 
 		shellHook = ''
