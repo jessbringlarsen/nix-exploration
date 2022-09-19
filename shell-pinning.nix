@@ -14,6 +14,7 @@ in
 			nodejs-pkg
 			git
 		];
+		ENVIRONMENT="dev";
 
 		shellHook = ''
 			echo "Welcome!"
