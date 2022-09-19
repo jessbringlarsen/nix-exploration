@@ -13,9 +13,13 @@ Adding `--pure` will ensure the environment is almost entirely cleared before th
 
 ### Versioning
 
+See `https://status.nixos.org/` for status on channels and to get the git commit hash to use in the pinning statements see `shell-pinning.nix`.
+Use `https://search.nixos.org/packages` to search for packages and an this unofficial site to search for previous versions of a package: `https://lazamar.co.uk/nix-versions/`
+
+#### Channels
+
 Use the `nix-channel --list` to inspect the current channel in use.
 
-Unofficial site to search for previous versions of a package: https://lazamar.co.uk/nix-versions/
 
 ## Nix Language
 
