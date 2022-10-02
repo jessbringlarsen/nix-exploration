@@ -38,6 +38,11 @@ Use `https://search.nixos.org/packages` to search for packages and an this unoff
 
 See `https://github.com/NixOS/nixpkgs/tree/master/pkgs/applications` for Nix expression for each package.
 
+Example of a shell pinned to specific versions:
+
+	nix-shell --pure -p git -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/2a601aafdc5605a5133a2ca506a34a3a73377247.tar.gz
+
+
 #### Channels
 
 Use the `nix-channel --list` to inspect the current channel in use.
