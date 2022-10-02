@@ -8,6 +8,7 @@
 		];
 
 		shellHook = ''
+                        unset PROMPT_COMMAND
 			echo "Welcome!"
 		'';
 }
