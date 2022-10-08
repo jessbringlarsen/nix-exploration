@@ -29,6 +29,13 @@ $ which btop
 ```
 Adding `--pure` will ensure the environment is almost entirely cleared before the interactive shell is started except for some environment variables.
 
+Install a major version a package:
+```bash
+nix-shell -p nodejs-14_x
+```
+
+
+
 ### Versioning
 
 Either channels or git commit hash can be used.
@@ -48,6 +55,22 @@ Example of a shell pinned to specific versions:
 Use the `nix-channel --list` to inspect the current channel in use.
 
     nix-shell -p '(import <mychannel> {}).hello'
+
+By default the unstable channel is available `nixospkgs`. To install the latest (currently) stable channel:
+
+         nix-channel --add https://channels.nixos.org/nixos-22.05 nixos
+         nix-channel --update nixos
+
+After that imports can be done from the `nixos` channel.
+
+_Stable channels_
+
+Stable channels provide conservative updates for fixing bugs and security vulnerabilities, but do not receive major updates after initial release. 
+New stable channels are released every six months.
+
+_Unstable channels_
+
+Unstable channels (nixos-unstable, nixpkgs-unstable) correspond to the main development branch (master) of Nixpkgs, delivering the latest tested updates on a rolling basis.
 
 ## Nix Language
 
