@@ -52,16 +52,24 @@ Example of a shell pinned to specific versions:
 
 #### Channels
 
+See [this](https://status.nixos.org/) for available channels. There are different types of channels. The `nixospkgs*` channels is not to be used if you use nixos - se [this](https://jorel.dev/NixOS4Noobs/channels.html).  
+
+
 Use the `nix-channel --list` to inspect the current channel in use.
 
     nix-shell -p '(import <mychannel> {}).hello'
 
 By default the unstable channel is available `nixospkgs`. To install the latest (currently) stable channel:
 
-         nix-channel --add https://channels.nixos.org/nixos-22.05 nixos
-         nix-channel --update nixos
+         nix-channel --add https://channels.nixos.org/nixos-22.05
+         nix-channel --update nixos-22-05
 
-After that imports can be done from the `nixos` channel.
+After that imports can be done from the `nixos-22.05` channel.
+
+https://jorel.dev/NixOS4Noobs/channels.html
+
+
+The nixos channels have different tests to the nixpkgs channels and are designed for the operating system as a whole, unlike the nixpkgs channels.
 
 _Stable channels_
 
