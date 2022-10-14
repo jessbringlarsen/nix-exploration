@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}}:
+{ pkgs ? import <nixos> {}}:
 	pkgs.mkShell {
 		name = "My Awesome Shell"; 
 		buildInputs = with pkgs; [
@@ -8,7 +8,7 @@
 		];
 
 		shellHook = ''
-                        unset PROMPT_COMMAND
+            unset PROMPT_COMMAND
 			echo "Welcome!"
 		'';
 }
