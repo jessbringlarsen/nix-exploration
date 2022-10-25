@@ -14,7 +14,7 @@ If you’d like to provide a script that is reproducible, meaning it will also p
 
 ## Installation
 
-Can either be installed or run using Docker:
+The packagemanager can either be [installed](https://nixos.org/download.html#download-nix) or used by running NixOs e.g. using Docker as below:
 
     docker run -ti nixos/nix
 
