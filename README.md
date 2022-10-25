@@ -29,12 +29,15 @@ $ which btop
 ```
 Adding `--pure` will ensure the environment is almost entirely cleared before the interactive shell is started except for some environment variables.
 
-Install a major version a package:
+Install a major version a package in a shell:
 ```bash
 nix-shell -p nodejs-14_x
 ```
 
-
+Searching for packages:
+```bash
+nix-env -qaP openjdk
+```
 
 ### Versioning
 
